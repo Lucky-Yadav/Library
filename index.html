@@ -5,8 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="header"></div>
+    <div class="form">
+        <h5>Library Management System</h5>
+        <div class="inputs">
+            <input type="text" id="book_name" placeholder="Book Name">
+            <input type="text" placeholder="Author Name">
+            <input type="text" placeholder="Book Description">
+            <input type="date">
+            <input type="text" placeholder="Select Category">
+            <input type="text" placeholder="Book's Price">
+            <button onclick="setdata()">Submit</button>
+            
+        </div>
+    </div>
 </body>
+<script type="module">
+    let header = document.getElementById("header");
+    import navbar from "./components/navbar.js";
+    header.innerHTML = navbar();
+</script>
+<script>
+    function setdata() {
+        var book_name = document.getElementById("book_name")
+        var name  = book_name
+   console.log(book_name)
+    }
+   
+</script>
 </html>
