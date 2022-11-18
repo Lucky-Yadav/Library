@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="data">
+        <div class="left">
+            <div id="book-name"></div>
+            <div id="author-name"></div>
+            <div id="description"></div>
+        </div>
+        <div class="right">
+            <div id="date"></div>
+       <div id="category"></div>
+       <div id="price"></div>
+        </div>
+        <button onclick="buy()">Buy</button>
+        <button>Bookmark</button>
+       
+    </div>
+</body>
+<script type="module">
+    let header = document.getElementById("header");
+    import navbar from "./components/navbar.js";
+    header.innerHTML = navbar();
+</script>
+<script>
+    let book_data = JSON.parse(localStorage.getItem("logindata"));
+    document.getElementById("book-name").innerHTML = `Book Name :- ${book_data.book_name}`
+    document.getElementById("author-name").innerHTML = book_data.author_name
+    document.getElementById("description").innerHTML = book_data.description
+    document.getElementById("date").innerHTML = book_data.date
+    document.getElementById("category").innerHTML = book_data.category
+    document.getElementById("price").innerHTML = book_data.price
+    console.log(book_data)
+    function buy() {
+        
+    }
+</script>
+</html>

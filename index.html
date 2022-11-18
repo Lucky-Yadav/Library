@@ -13,11 +13,11 @@
         <h5>Library Management System</h5>
         <div class="inputs">
             <input type="text" id="book_name" placeholder="Book Name">
-            <input type="text" placeholder="Author Name">
-            <input type="text" placeholder="Book Description">
-            <input type="date">
-            <input type="text" placeholder="Select Category">
-            <input type="text" placeholder="Book's Price">
+            <input type="text" id="author" placeholder="Author Name">
+            <input type="text" id="description" placeholder="Book Description">
+            <input type="date" id="date">
+            <input type="text" id="category" placeholder="Select Category">
+            <input type="text" id="price" placeholder="Book's Price">
             <button onclick="setdata()">Submit</button>
             
         </div>
@@ -30,9 +30,16 @@
 </script>
 <script>
     function setdata() {
-        var book_name = document.getElementById("book_name")
-        var name  = book_name
-   console.log(book_name)
+        var book_name = document.getElementById("book_name").value
+        var author_name = document.getElementById("author").value
+        var description = document.getElementById("description").value
+        var date = document.getElementById("date").value
+        var category = document.getElementById("category").value
+        var price = document.getElementById("price").value
+   console.log(book_name,author_name,description,date,category,price)
+   let loginData = {book_name,author_name,description,date,category,price}
+   localStorage.setItem("logindata", JSON.stringify(loginData));
+   alert("item added go to dashboard ")
     }
    
 </script>

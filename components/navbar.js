@@ -3,7 +3,7 @@ function navbar() {
     <div id="navbar">
         <div class="logo">
         <a href="./index.html"><p>Home</p></a>            
-        <a href="./index.html"><p>Dashboard</p></a>            
+        <a href="./dashboard.html"><p>Dashboard</p></a>            
         </div>
         <div class="options">
             <a href="./showrecipie.html"><p>My Books</p></a> 
