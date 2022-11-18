@@ -37,8 +37,8 @@
         var category = document.getElementById("category").value
         var price = document.getElementById("price").value
    console.log(book_name,author_name,description,date,category,price)
-   let loginData = {book_name,author_name,description,date,category,price}
-   localStorage.setItem("logindata", JSON.stringify(loginData));
+   let bookdata = {book_name,author_name,description,date,category,price}
+   localStorage.setItem("bookdata", JSON.stringify(bookdata));
    alert("item added go to dashboard ")
     }
    

@@ -9,21 +9,7 @@
 </head>
 <body>
     <div id="header"></div>
-    <div class="data">
-        <div class="left">
-            <div id="book-name"></div>
-            <div id="author-name"></div>
-            <div id="description"></div>
-        </div>
-        <div class="right">
-            <div id="date"></div>
-       <div id="category"></div>
-       <div id="price"></div>
-        </div>
-        <button onclick="buy()">Buy</button>
-        <button onclick="bookmark()">Bookmark</button>
-       
-    </div>
+    
 </body>
 <script type="module">
     let header = document.getElementById("header");
@@ -31,7 +17,7 @@
     header.innerHTML = navbar();
 </script>
 <script>
-    let book_data = JSON.parse(localStorage.getItem("bookdata"));
+     let book_data = JSON.parse(localStorage.getItem("bookmark_list"));
     document.getElementById("book-name").innerHTML = `Book Name :- ${book_data.book_name}`
     document.getElementById("author-name").innerHTML = book_data.author_name
     document.getElementById("description").innerHTML = book_data.description
@@ -39,15 +25,5 @@
     document.getElementById("category").innerHTML = book_data.category
     document.getElementById("price").innerHTML = book_data.price
     console.log(book_data)
-    function buy() {
-   localStorage.setItem("buy_list", JSON.stringify(book_data));
-   localStorage.removeItem("bookdata");
-   alert("item added to buy list go to My Books page ")
-    }
-    function bookmark() {
-   localStorage.setItem("bookmark_list", JSON.stringify(book_data));
-   localStorage.removeItem("bookdata");
-   alert("item added to bookmark list go to Bookmark page ")
-    }
 </script>
 </html>

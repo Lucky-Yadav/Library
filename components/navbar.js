@@ -6,8 +6,8 @@ function navbar() {
         <a href="./dashboard.html"><p>Dashboard</p></a>            
         </div>
         <div class="options">
-            <a href="./showrecipie.html"><p>My Books</p></a> 
-            <a href="./search.html"><p>Bookmarks</p></a>            
+            <a href="./book.html"><p>My Books</p></a> 
+            <a href="./bookmark.html"><p>Bookmarks</p></a>            
          </div>
         </div>
     </div>`;
